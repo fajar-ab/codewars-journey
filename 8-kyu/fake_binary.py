@@ -3,10 +3,9 @@
 # Link  : http://codewars.com/kata/57eae65a4321032ce000002d
 
 def fake_bin(x):
-    return "".join(['0' if int(a) < 5 else '1' for a in x])
-
-def fake_bin(x):
-    return "".join([str(int(a >= 5)) for a in map(int, x)])
-
-def fake_bin(x):
-    return "".join([str(int(a // 5)) for a in map(int, x)])
+    """
+    melakukan pemetaan karakter <=5 mendadi 0 dan >5 atau penggantian karakter 
+    secara massal dengan efisiensi tinggi.
+    """
+    map = str.maketrans('0123456789', '0000011111')
+    return x.translate(map)
