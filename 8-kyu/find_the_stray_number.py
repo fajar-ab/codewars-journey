@@ -3,12 +3,11 @@
 # Link  : https://www.codewars.com/kata/57f609022f4d534f05000024
 
 def stray(arr):
-    """pastikan hanya ada satu value yang unik di list
-    jika lebih xor tidak akan berkerja mencari value unik"""
-    result = 0
+    """cara lebih aman adalah melihat berapa bayak angka yang muncul
+    di dalam list dan bandingkan angka yang muncul hanya satu"""
     for value in arr:
-        result ^= value
-    return result
+        if arr.count(value) == 1:
+            return value
 
 print(stray([1, 1, 1, 1, 1, 1, 2]))
 
