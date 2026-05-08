@@ -3,11 +3,9 @@
 # Link  : https://www.codewars.com/kata/57f609022f4d534f05000024
 
 def stray(arr):
-    """cara lebih aman adalah melihat berapa bayak angka yang muncul
-    di dalam list dan bandingkan angka yang muncul hanya satu"""
-    for value in arr:
-        if arr.count(value) == 1:
-            return value
+    """menggunakan min untuk membandingkan, dan
+    menentukan “mana yang paling kecil”"""
+    return min(arr, key=arr.count)
 
 print(stray([1, 1, 1, 1, 1, 1, 2]))
 
