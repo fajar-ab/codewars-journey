@@ -3,9 +3,8 @@
 # Link  : https://www.codewars.com/kata/56747fd5cb988479af000028
 
 def get_middle(s):
-    mid = len(s) // 2
-    if len(s) % 2 == 0:
-        return s[mid-1:mid+1]
-    return s[mid]
+    """ divmod = (num // 2, num % 2) """
+    index, odd = divmod(len(s), 2)
+    return s[index] if odd else s[index-1: index+1]
 
 print(get_middle("testing"))
