@@ -4,17 +4,9 @@
 
 
 def to_alternating_case(string):
-    result = ""
-
-    for alfa in string:
-        if alfa.isupper():
-            result += alfa.lower()
-        elif alfa.islower():
-            result += alfa.upper()
-        else:
-            result += alfa
-
-    return result
+    """ swapcase() adalah method string yang menukar huruf besar 
+    menjadi huruf kecil dan huruf kecil menjadi huruf besar """
+    return string.swapcase()
 
 
 print(to_alternating_case("hello world"))
