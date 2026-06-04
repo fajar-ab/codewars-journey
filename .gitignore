@@ -1,3 +1,6 @@
 tempCodeRunnerFile.py
 template.py
 main.py
+
+.venv/
+__pycache__/
