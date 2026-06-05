@@ -4,7 +4,7 @@
 
 
 def summation(num):
-    return sum(i for i in range(1, num + 1))
+    return sum(range(1, num + 1))
 
 
 assert summation(1) == 1
