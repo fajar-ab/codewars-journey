@@ -4,7 +4,7 @@
 
 
 def greet(language):
-    greeting = {
+    return {
         "english": "Welcome",
         "czech": "Vitejte",
         "danish": "Velkomst",
@@ -22,6 +22,4 @@ def greet(language):
         "spanish": "Bienvenido",
         "swedish": "Valkommen",
         "welsh": "Croeso",
-    }
-
-    return "Welcome" if language not in greeting else greeting.get(language)
+    }.get(language, "Welcome")
