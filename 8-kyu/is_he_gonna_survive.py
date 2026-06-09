@@ -1,0 +1,7 @@
+# Rank  : 8 kyu
+# Title : Is he gonna survive?
+# Link  : https://www.codewars.com/kata/59ca8246d751df55cc00014c
+
+
+def hero(bullets, dragons):
+    return bullets / 2 >= dragons
