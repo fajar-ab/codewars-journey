@@ -4,7 +4,7 @@
 
 
 def rain_amount(mm):
-    if (rain_amount := int(mm)) < 40:
+    if (rain_amount := mm) < 40:
         return f"You need to give your plant {40 - rain_amount}mm of water"
     else:
         return "Your plant has had more than enough water for today!"
