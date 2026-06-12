@@ -4,4 +4,4 @@
 
 
 def sp_eng(sentence):
-    return sentence.casefold().find("english") >= 0
+    return "english" in sentence.lower()
