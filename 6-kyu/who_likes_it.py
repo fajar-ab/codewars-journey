@@ -4,17 +4,17 @@
 
 
 def likes(names):
-    return (
-        "no one likes this"
-        if not names
-        else "{} likes this".format(*names)
-        if len(names) == 1
-        else "{} and {} like this".format(*names)
-        if len(names) == 2
-        else "{}, {} and {} like this".format(*names)
-        if len(names) == 3
-        else "{}, {} and {} others like this".format(*names[:2], len(names[2:]))
-    )
+    match names:
+        case []:
+            return "no one likes this"
+        case [a]:
+            return f"{a} likes this"
+        case [a, b]:
+            return f"{a} and {b} like this"
+        case [a, b, c]:
+            return f"{a}, {b} and {c} like this"
+        case [a, b, *rest]:
+            return f"{a}, {b} and {len(rest)} others like this"
 
 
-print(likes(["Alex", "Jacob", "Mark", "Max"]))
+print(likes([]))
