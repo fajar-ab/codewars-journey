@@ -4,11 +4,7 @@
 
 
 def high(x):
-    points_word = dict(
-        (word, sum(map(lambda c: ord(c) - 96, word))) for word in x.split()
-    )
-
-    return max(points_word, key=points_word.get)
+    return max(x.split(), key=lambda k: sum(ord(c) - 96 for c in k))
 
 
 print(high("aa b"))
