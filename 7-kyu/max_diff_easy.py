@@ -3,9 +3,5 @@
 # Link  : https://www.codewars.com/kata/588a3c3ef0fbc9c8e1000095
 
 
-def max_diff(lst):
-    if len(lst) > 1:
-        a, *_, b = sorted(lst)
-        return b - a
-
-    return 0
+def max_diff(list):
+    return max(list) - min(list) if list else 0
