@@ -3,16 +3,13 @@
 # Link  : https://www.codewars.com/kata/5803956ddb07c5c74200144e
 
 
-from math import floor
-
-
 def dating_range(age):
     if age > 14:
         min, max = age / 2 + 7, 2 * (age - 7)
     else:
         min, max = age - 0.10 * age, age + 0.10 * age
 
-    return f"{floor(min)}-{floor(max)}"
+    return f"{int(min)}-{int(max)}"
 
 
 print(dating_range(17), "\t15-20")
