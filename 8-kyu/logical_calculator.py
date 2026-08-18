@@ -7,5 +7,10 @@ from functools import reduce
 
 
 def logical_calc(array, op):
-    oper = {"AND": "and", "OR": "or", "XOR": "^"}
-    return reduce(lambda a, b: eval(f"{a} {oper.get(op)} {b}"), array)
+    ops = {
+        "AND": lambda a, b: a and b,
+        "OR": lambda a, b: a or b,
+        "XOR": lambda a, b: a ^ b,
+    }
+
+    return reduce(ops.get(op), array)
