@@ -4,7 +4,7 @@
 
 
 def broken(inp):
-    return "".join(str(int(not bool(int(n)))) for n in inp)
+    return inp.translate(str.maketrans("10", "01"))
 
 
 print(broken("101"))
