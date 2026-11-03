@@ -3,9 +3,11 @@
 # Link  : https://www.codewars.com/kata/58223370aef9fc03fd000071
 
 
+import re
+
+
 def dashatize(n):
-    temp = "".join([f"-{num}-" if int(num) % 2 else num for num in str(n)])
-    return temp.replace("--", "-").strip("-")
+    return "-".join(re.findall(r"[02468]+|[13579]", str(abs(n))))
 
 
 print(dashatize(6815))
