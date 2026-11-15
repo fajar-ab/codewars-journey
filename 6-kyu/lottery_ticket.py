@@ -4,7 +4,7 @@
 
 
 def bingo(ticket, win):
-    mini_wins = sum(1 for code, number in ticket if any(ord(c) == number for c in code))
+    mini_wins = sum(1 for code, number in ticket if chr(number) in code)
     return "Winner!" if mini_wins >= win else "Loser!"
 
 
