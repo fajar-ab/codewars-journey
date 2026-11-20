@@ -4,4 +4,4 @@
 
 
 def words_to_marks(s):
-    return sum(map(lambda c: ord(c) - 96, s))
+    return sum(ord(c) - 96 for c in s)
