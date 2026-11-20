@@ -2,12 +2,11 @@
 # Title : Kebabize
 # Link  : https://www.codewars.com/kata/57f8ff867a28db569e000c4a
 
-import re
-
 
 def kebabize(st):
-    # your code here
-    return
+    return "".join(
+        f"-{c.lower()}" if c.isupper() else c for c in st if not c.isdigit()
+    ).lstrip("-")
 
 
-print(re.split(r"(?=[A-Z])", "CamelsHave3ThreeHumps"))
+print(kebabize("CamelsHave3ThreeHumps"))
